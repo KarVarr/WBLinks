@@ -12,7 +12,7 @@ function convertToLinks() {
     if (trimmedLine !== '') {
       const linkElement = document.createElement('a');
       linkElement.href = trimmedLine;
-      linkElement.textContent = `Link ${index + 1}`;
+      linkElement.textContent = `link h&m ${index + 1}`;
       outputLinks.appendChild(linkElement);
 
       const lineBreak = document.createElement('br');
