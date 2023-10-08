@@ -1,3 +1,5 @@
+'use strict';
+
 function convertToLinks() {
   const inputText = document.getElementById('inputText').value;
   const outputLinks = document.getElementById('outputLinks');
@@ -22,5 +24,7 @@ function convertToLinks() {
 
 function deleteAllLinks() {
   const inputText = document.getElementById('inputText');
+  const outputLinks = document.getElementById('outputLinks');
   inputText.value = '';
+  outputLinks.remove();
 }

@@ -1,12 +1,19 @@
 :root {
-  --main-color: #a1c8ee87;
-  --border-spinner-color: #d8ff89;
+  --main-color: #3c8dde87;
+  --border-spinner-color: #a5e329;
 }
 
 body {
   font-family: monospace;
   background: #ef32d9;
-  background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
+  background: -o-linear-gradient(left, #89fffd, #ef32d9);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#89fffd),
+    to(#ef32d9)
+  );
   background: linear-gradient(to right, #89fffd, #ef32d9);
 }
 
@@ -14,9 +21,18 @@ body {
   min-width: 1200px;
   width: 100%;
   min-height: 98vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -27,15 +43,57 @@ h1 {
 
 /* SPINER  */
 .textArea {
+  margin: 10px;
+  padding: 10px;
   width: 90%;
   min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border: 4px solid transparent;
   border-radius: 50px;
+  -webkit-animation: spinBorder 10s linear infinite;
   animation: spinBorder 10s linear infinite;
   overflow: hidden;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
   transition: 0.3s all;
+}
+
+@-webkit-keyframes spinBorder {
+  0% {
+    border-top-color: var(--border-spinner-color);
+    border-right-color: var(--main-color);
+    border-bottom-color: var(--main-color);
+    border-left-color: var(--main-color);
+  }
+  25% {
+    border-top-color: var(--main-color);
+    border-right-color: var(--border-spinner-color);
+    border-bottom-color: var(--main-color);
+    border-left-color: var(--main-color);
+  }
+  50% {
+    border-top-color: var(--main-color);
+    border-right-color: var(--main-color);
+    border-bottom-color: var(--border-spinner-color);
+    border-left-color: var(--main-color);
+  }
+  75% {
+    border-top-color: var(--main-color);
+    border-right-color: var(--main-color);
+    border-bottom-color: var(--main-color);
+    border-left-color: var(--border-spinner-color);
+  }
+  100% {
+    border-top-color: var(--border-spinner-color);
+    border-right-color: var(--main-color);
+    border-bottom-color: var(--main-color);
+    border-left-color: var(--main-color);
+  }
 }
 
 @keyframes spinBorder {
@@ -74,8 +132,10 @@ h1 {
 .links {
   text-align: center;
   font-size: 18px;
+
   width: 100%;
   margin-left: 10px;
+  color: #070707;
 }
 
 .result {
@@ -83,11 +143,12 @@ h1 {
   font-size: 18px;
   width: 100%;
   margin: 0;
+  color: aliceblue;
 }
 
 textarea {
-  width: 80%;
-  height: 60%;
+  width: 90%;
+  height: 50%;
   padding: 30px;
   background-color: transparent;
   border: none;
@@ -97,6 +158,7 @@ textarea {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   font-weight: 600;
+  resize: none;
 }
 
 .btn {
@@ -110,7 +172,10 @@ textarea {
   height: 80px;
   border: none;
   border-radius: 40px;
+  -webkit-box-shadow: 0px 6px 1px #222222ca;
   box-shadow: 0px 6px 1px #222222ca;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
   transition: 0.2s all;
 }
 
@@ -124,11 +189,15 @@ textarea {
 
 .btn:hover {
   cursor: pointer;
+  -webkit-filter: saturate(1.3);
   filter: saturate(1.3);
   background-color: #070707;
-  color: #ef32d9 ;
+  color: #ef32d9;
 }
 .btn:active {
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
   transform: translateY(5px);
+  -webkit-box-shadow: 0px 1px 1px #222222ca;
   box-shadow: 0px 1px 1px #222222ca;
 }
