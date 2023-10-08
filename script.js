@@ -19,3 +19,8 @@ function convertToLinks() {
     }
   });
 }
+
+function deleteAllLinks() {
+  const inputText = document.getElementById('inputText');
+  inputText.value = '';
+}

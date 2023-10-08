@@ -99,7 +99,7 @@ textarea {
   font-weight: 600;
 }
 
-.buttonConvertlincs {
+.btn {
   display: inline-block;
   text-decoration: none;
   font-family: monospace;
@@ -110,17 +110,25 @@ textarea {
   height: 80px;
   border: none;
   border-radius: 40px;
-  background-color: rgb(255, 247, 0);
   box-shadow: 0px 6px 1px #222222ca;
   transition: 0.2s all;
 }
 
-.buttonConvertlincs:hover {
-  cursor: pointer;
-  transform: translateY(1px);
-  box-shadow: 0px 4px 1px #222222ca;
+.button_ConvertLincs {
+  background-color: rgb(255, 247, 0);
 }
-.buttonConvertlincs:active {
+
+.button_deleteAllLinks {
+  background-color: #cd0c0c;
+}
+
+.btn:hover {
+  cursor: pointer;
+  filter: saturate(1.3);
+  background-color: #070707;
+  color: #ef32d9 ;
+}
+.btn:active {
   transform: translateY(5px);
   box-shadow: 0px 1px 1px #222222ca;
 }
