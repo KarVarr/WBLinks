@@ -5,16 +5,16 @@
 
 body {
   font-family: monospace;
-  background: #ef32d9;
-  background: -o-linear-gradient(left, #89fffd, #ef32d9);
+  background: #cb11ab;
+  background: -o-linear-gradient(left, #cb11ab, #481173);
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(#89fffd),
-    to(#ef32d9)
+    from(#cb11ab),
+    to(#481173)
   );
-  background: linear-gradient(to right, #89fffd, #ef32d9);
+  background: linear-gradient(to right, #cb11ab, #481173);
 }
 
 .container {
