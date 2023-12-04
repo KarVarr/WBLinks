@@ -132,7 +132,7 @@ h1 {
 .links {
   text-align: center;
   font-size: 18px;
-
+  
   width: 100%;
   margin-left: 10px;
   color: #070707;
@@ -146,11 +146,21 @@ h1 {
   color: aliceblue;
 }
 
+a {
+  color: aliceblue;
+}
+
+a:visited {
+  color: purple;
+}
+
+
 textarea {
   width: 90%;
   height: 50%;
   padding: 30px;
   background-color: transparent;
+  color: aliceblue;
   border: none;
   border-color: #d6da6a;
   border-style: solid;

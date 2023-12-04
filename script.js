@@ -41,8 +41,6 @@ window.addEventListener('load', function () {
   if (savedLinks && savedLinks.length > 0) {
     const inputText = document.getElementById('inputText');
     inputText.value = savedLinks.join('\n');
-    convertToLinks(); 
+    convertToLinks();
   }
 });
-
-
