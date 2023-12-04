@@ -150,8 +150,16 @@ a {
   color: aliceblue;
 }
 
+a:hover {
+  color: orange;
+}
+
 a:visited {
-  color: purple;
+  color: yellowgreen;
+}
+
+a:active {
+  color: blue;
 }
 
 
