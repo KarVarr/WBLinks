@@ -132,7 +132,7 @@ h1 {
 .links {
   text-align: center;
   font-size: 18px;
-  
+
   width: 100%;
   margin-left: 10px;
   color: #070707;
@@ -162,7 +162,6 @@ a:active {
   color: blue;
 }
 
-
 textarea {
   width: 90%;
   height: 50%;
@@ -178,6 +177,19 @@ textarea {
   font-weight: 600;
   resize: none;
   overflow: hidden;
+}
+
+.linksCount {
+  font-family: monospace;
+  font-size: 32px;
+  color: aliceblue;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .btn {

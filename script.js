@@ -1,5 +1,10 @@
 'use strict';
 
+function updateLinksCount(savedLinks) {
+  const linksCount = document.querySelector('.linksCount');
+  linksCount.textContent = `Links count: ${savedLinks.length}`;
+}
+
 function convertToLinks() {
   const inputText = document.getElementById('inputText').value;
   const outputLinks = document.getElementById('outputLinks');
@@ -25,12 +30,15 @@ function convertToLinks() {
   });
 
   localStorage.setItem('savedLinks', JSON.stringify(savedLinks));
+  updateLinksCount(savedLinks);
 }
 
 function deleteAllLinks() {
   const inputText = document.getElementById('inputText');
   const outputLinks = document.getElementById('outputLinks');
+  const linksCount = document.querySelector('.linksCount');
   inputText.value = '';
+  linksCount.textContent = `Links count: 0`;
   outputLinks.remove();
 
   localStorage.removeItem('savedLinks');
@@ -38,9 +46,13 @@ function deleteAllLinks() {
 
 window.addEventListener('load', function () {
   const savedLinks = JSON.parse(localStorage.getItem('savedLinks'));
+
   if (savedLinks && savedLinks.length > 0) {
     const inputText = document.getElementById('inputText');
     inputText.value = savedLinks.join('\n');
+
+    updateLinksCount(savedLinks);
+
     convertToLinks();
   }
 });
