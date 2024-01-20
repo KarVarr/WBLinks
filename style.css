@@ -6,7 +6,7 @@
 body {
   font-family: monospace;
   background: #cb11ab;
-  background: -o-linear-gradient(left, #cb11ab, #481173);
+  background: -o-linear-gradient(left, #ed3cca,#df34d2,#d02bd9,#bf22e1,#ae1ae8,#9a10f0,#8306f7,#7c1af8);
   background: -webkit-gradient(
     linear,
     left top,
@@ -14,7 +14,7 @@ body {
     from(#cb11ab),
     to(#481173)
   );
-  background: linear-gradient(to right, #cb11ab, #481173);
+  background: linear-gradient(to right, #ed3cca,#df34d2,#d02bd9,#bf22e1,#ae1ae8,#9a10f0,#8306f7,#7c1af8);
 }
 
 .container {
